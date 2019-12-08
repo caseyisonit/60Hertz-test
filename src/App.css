@@ -1,0 +1,18 @@
+body {
+    background-image: url(/images/triangle-mosaic.png);
+    background-repeat: repeat;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* class styles */
+.navbar {
+    height: 100px;
+    background-color: orange;
+}

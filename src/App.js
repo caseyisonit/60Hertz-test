@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col, Navbar } from 'reactstrap';
 import moment from 'moment';
 import SearchBar from './components/SearchBar';
 import DayCard from './components/DayCard';
-import DayDetails from './components/DayDetails';
+import Clothing from './components/Clothing';
 import sampleData from './data/sample.json';
+import './App.css'
+import { strict } from 'assert';
 
 
 const App = () => {
@@ -12,18 +14,19 @@ const App = () => {
   const [data, setData] = useState({
     day: sampleData,
     location: "Denver, CO",
-    searchTerm: ""
+    searchTerm: "",
   });
 
   //destructured for easier calling
   const { day, location, searchTerm } = data;
 
-
   return (
-    <Container>
+<>
+<Navbar><h1>Name of Company</h1></Navbar>
+    <Container fluid>
       <Row>
-        <Col md={8}><h1>Today's Weather for {location}</h1></Col>
-        <Col md={4}><SearchBar
+        <Col md={4}><h1>Today's Weather for {location}</h1></Col>
+        <Col md={{size: 4, offset: 4}}><SearchBar
         /></Col>
       </Row>
       <Row>
@@ -38,10 +41,13 @@ const App = () => {
           />
         </Col>
         <Col md={8}>
-          <DayDetails />
+          <Clothing
+            description={day.weather[0].main}
+          />
         </Col>
       </Row>
     </Container>
+    </>
   );
 }
 
