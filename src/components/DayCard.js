@@ -21,14 +21,14 @@ const DayWrapper = styled.div`
         width: auto;
     }
 `
-
 const DayCard = props => {
+    
 
     return (
         <Col>
             <DayWrapper>
                 <Card>
-                    <CardHeader className="day">{props.day}</CardHeader>
+                    <CardHeader className="day"><h3>{props.day}</h3></CardHeader>
                     <CardBody>
                         <h2 className="current">{props.current}&deg;</h2>
                         <img src={`http://openweathermap.org/img/wn/${props.icon}@2x.png`} alt={props.description} />
@@ -40,5 +40,6 @@ const DayCard = props => {
         </Col>
     )
 }
+
 
 export default DayCard;
