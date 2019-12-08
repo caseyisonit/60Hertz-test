@@ -1,18 +1,56 @@
 body {
-    background-image: url(/images/triangle-mosaic.png);
+    background-image: url(/images/SRTP-abstract-background-06.jpg);
     background-repeat: repeat;
+    font-family: 'Roboto', sans-serif !important;
 }
 
-h1, h2, h3 {
+h1, h2 {
     font-family: 'Montserrat', sans-serif;
 }
 
-p {
-    font-family: 'Roboto', sans-serif;
+h1 {
+    font-size: 4vh !important;
 }
 
 /* class styles */
-.navbar {
-    height: 100px;
-    background-color: orange;
+
+img.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 75px;
+    margin-top: 0px;
+    
 }
+
+.intro {
+    text-align: center;
+    font-size: 2vh;
+    padding-bottom: 30px;
+}
+
+.jumbotron {
+    background-color: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: black 3px !important;
+    padding: 30px !important;
+}
+
+.title, .city {
+    /* display: block; */
+    margin-left: auto;
+    margin-right: auto;
+    color: #e96b16;
+    -webkit-animation: mymove 10s infinite; /* Safari 4.0 - 8.0 */
+    animation: mymove 10s infinite;
+  }
+  
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes mymove {
+    50% {color: #feb822;}
+  }
+  
+  @keyframes mymove {
+    50% {color: #feb822;}
+  }
+

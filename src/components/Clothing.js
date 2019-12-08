@@ -1,26 +1,36 @@
 import React from 'react';
+import { Row, Col } from 'reactstrap'
 import styled from 'styled-components';
 
 const ClothesWrapper = styled.div`
-    .card{
-        text-align: center;
-    }
+    h2 {
+    font-size: 4vh;
+    }  
+
     img {
-        width: 20vw;
+        width: 100%;
+        margin-right: 5px;
+        border-radius: .25rem;
+        box-shadow: 5px 8px 8px rgba(233, 107, 22, .45);
+        margin-bottom: 50px;
     }
 `
 
 const Clothing = props => {
 
     return (
-        <>
-        <ClothesWrapper>
-
-        <h2>What to Wear Today</h2>
-        <img src={`${process.env.PUBLIC_URL}/images/girl_${props.description}.jpg`} alt={props.description}></img>
-        <img src={`${process.env.PUBLIC_URL}/images/boy_${props.description}.jpg`} alt={props.description}></img>
-        </ClothesWrapper>
-        </>
+        <Col>
+            <ClothesWrapper>
+                <Row>
+                    <Col md={6}>
+                        <img src={`${process.env.PUBLIC_URL}/images/girl_${props.description}.jpg`} alt={props.description}></img>
+                    </Col>
+                    <Col md={6}>
+                    <img src={`${process.env.PUBLIC_URL}/images/boy_${props.description}.jpg`} alt={props.description}></img>
+                    </Col>
+                </Row>
+            </ClothesWrapper>
+        </Col>
     )
 }
 
