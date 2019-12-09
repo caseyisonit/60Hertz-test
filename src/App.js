@@ -18,12 +18,13 @@ const App = () => {
   //destructured for easier calling
   const { today, location } = weather;
 
+  //use in place of componentDidMount()
   useEffect(() => {
     getWeather(80202);
   }, []);
 
+  //API call for todays weather
   const getWeather = zip => {
-
     API.getWeather(zip)
       .then(res => {
         console.log(res.data);
@@ -57,21 +58,23 @@ const App = () => {
         </Row>
         <Row>
           <Col md={4}>
-            {today ? ( <DayCard
+            {/* used a ternary to allow the api call to fill state so we can pass it through props */}
+            {today ? (<DayCard
               day={moment().format('dddd')}
               current={today.main.temp}
               high={today.main.temp_max}
               low={today.main.temp_min}
               icon={today.weather[0].icon}
               description={today.weather[0].main}
-            /> ) : (<h2>We're sorry!</h2>)}
-              
+            />) : (<h2>We're sorry!</h2>)}
+
           </Col>
           <Col md={8}>
+            {/* used a ternary to allow the api call to fill state so we can pass it through props */}
             {today ? (<Clothing
-            description={today.weather[0].main}
+              description={today.weather[0].main}
             />) : (<h2>Looks like we're having issues.</h2>)}
-            
+
           </Col>
         </Row>
       </Container>
@@ -79,4 +82,5 @@ const App = () => {
   );
 }
 
+//called network detector to check for internet connection
 export default NetworkDetector(App);

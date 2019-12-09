@@ -22,7 +22,6 @@ const DayWrapper = styled.div`
     }
 `
 const DayCard = props => {
-    
 
     return (
         <Col>
@@ -31,6 +30,7 @@ const DayCard = props => {
                     <CardHeader className="day"><h5>{props.day}</h5></CardHeader>
                     <CardBody>
                         <h2 className="current">{props.current}&deg;F</h2>
+                        {/* passing through props dynamically to call the icon from OpenWeatherMap */}
                         <img src={`http://openweathermap.org/img/wn/${props.icon}@2x.png`} alt={props.description} />
                         <h2 className="description">{props.description}</h2>
                         <h5 className="hiLow">High: {props.high}&deg;  |  Low: {props.low}&deg;</h5>
@@ -40,6 +40,5 @@ const DayCard = props => {
         </Col>
     )
 }
-
 
 export default DayCard;

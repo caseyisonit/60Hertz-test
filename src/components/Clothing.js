@@ -23,10 +23,12 @@ const Clothing = props => {
             <ClothesWrapper>
                 <Row>
                     <Col md={6}>
+                        {/* passing through props dynamically to call the image from public based on the weather description */}
                         <img src={`${process.env.PUBLIC_URL}/images/girl_${props.description}.jpg`} alt={props.description}></img>
                     </Col>
                     <Col md={6}>
-                    <img src={`${process.env.PUBLIC_URL}/images/boy_${props.description}.jpg`} alt={props.description}></img>
+                        {/* passing through props dynamically to call the image from public based on the weather description */}
+                        <img src={`${process.env.PUBLIC_URL}/images/boy_${props.description}.jpg`} alt={props.description}></img>
                     </Col>
                 </Row>
             </ClothesWrapper>
