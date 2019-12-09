@@ -1,4 +1,4 @@
-#[Salom Mulabi Fashion Forecast](https://murmuring-falls-83094.herokuapp.com/)
+# [Salom Mulabi Fashion Forecast](https://murmuring-falls-83094.herokuapp.com/)
 
 ## Code
 I chose to build this app with `Creat-React-App` and deploy with Heroku. I used React Hooks to streamline the code through setState and useEffect. The frontend frame work is built on [Bootstrap 4](https://getbootstrap.com/docs/4.3/getting-started/introduction/) utilizing [Reactstrap](https://reactstrap.github.io/) with styled-components and CSS. Incorporated two components that can be scaled as features are added.
@@ -41,12 +41,10 @@ I modified a background asset to include natural, whimsical green shapes. I sele
 - Speak with varying ages of Muslim children about what trends they like
 - Learn more about weather specific clothing for the culture
 
-
 ### Testing
 - Daily clicks
 - Heat mapping (even though there isnt functionality, kids scroll on phones)
 - Device Used
-- 
 
 ### Research Articles
 - [Instilling modesty in children](http://www.islamicinsights.com/features/instilling-modesty-in-children.html)
@@ -55,4 +53,3 @@ I modified a background asset to include natural, whimsical green shapes. I sele
 - [Islamic Holidays](https://libguides.webster.edu/holidays/islam)
 - [Colors of religion: Islam](https://www.colourlovers.com/blog/2007/09/08/colors-of-religion-islam)
 - [Children's clothes images all sourced from this store](https://www.sanaullastore.com/)
-
