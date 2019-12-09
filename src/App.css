@@ -1,6 +1,8 @@
 body {
     background-image: url(/images/SRTP-abstract-background-06.jpg);
-    background-repeat: repeat;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     font-family: 'Roboto', sans-serif !important;
 }
 
@@ -46,7 +48,7 @@ img.logo {
     /* display: block; */
     margin-left: auto;
     margin-right: auto;
-    color: #e96b16;
+    color: #e69a27;
     -webkit-animation: mymove 10s infinite; /* Safari 4.0 - 8.0 */
     animation: mymove 10s infinite;
   }

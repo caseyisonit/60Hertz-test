@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const DayWrapper = styled.div`
     .card{
         text-align: center;
-        box-shadow: 5px 8px 8px rgba(233, 107, 22, .45);
+        box-shadow: 5px 8px 8px rgba(0, 0, 0, .35);
         margin-bottom: 50px;
     }
 
@@ -14,7 +14,7 @@ const DayWrapper = styled.div`
     }
 
     h2 {
-        color: #e96b16;
+        color: #e69a27;
     }
 
     img {
@@ -28,12 +28,12 @@ const DayCard = props => {
         <Col>
             <DayWrapper>
                 <Card>
-                    <CardHeader className="day"><h3>{props.day}</h3></CardHeader>
+                    <CardHeader className="day"><h5>{props.day}</h5></CardHeader>
                     <CardBody>
-                        <h2 className="current">{props.current}&deg;</h2>
+                        <h2 className="current">{props.current}&deg;F</h2>
                         <img src={`http://openweathermap.org/img/wn/${props.icon}@2x.png`} alt={props.description} />
                         <h2 className="description">{props.description}</h2>
-                        <p className="hiLow">High: {props.high}&deg;  |  Low: {props.low}&deg;</p>
+                        <h5 className="hiLow">High: {props.high}&deg;  |  Low: {props.low}&deg;</h5>
                     </CardBody>
                 </Card>
             </DayWrapper>

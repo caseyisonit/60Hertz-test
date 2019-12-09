@@ -11,7 +11,7 @@ const ClothesWrapper = styled.div`
         width: 100%;
         margin-right: 5px;
         border-radius: .25rem;
-        box-shadow: 5px 8px 8px rgba(233, 107, 22, .45);
+        box-shadow: 5px 8px 8px rgba(0, 0, 0, .45);
         margin-bottom: 50px;
     }
 `
